@@ -1,17 +1,54 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="ko">
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-  <meta http-equiv="Content-Style-Type" content="text/css">
-  <title></title>
-  <meta name="Generator" content="Cocoa HTML Writer">
-  <meta name="CocoaVersion" content="2487.5">
-  <style type="text/css">
-    p.p1 {margin: 0.0px 0.0px 0.0px 0.0px; font: 12.0px Helvetica}
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>유희계보</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@300;400&family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<p class="p1">Archive.Begin</p>
-<p class="p1">바보</p>
+
+  <!-- DETAIL OVERLAY -->
+  <div id="detail-overlay" class="detail-overlay hidden">
+    <button class="close-btn" id="close-btn">✕</button>
+    <div class="detail-inner">
+      <div class="detail-image-wrap">
+        <img id="detail-img" src="" alt="" />
+      </div>
+      <div class="detail-info">
+        <div class="detail-meta-top">
+          <span class="detail-year" id="detail-year"></span>
+          <span class="detail-location" id="detail-location"></span>
+        </div>
+        <h1 class="detail-name" id="detail-name"></h1>
+        <div class="detail-props" id="detail-props"></div>
+        <p class="detail-desc" id="detail-desc"></p>
+        <p class="detail-source" id="detail-source"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- 종이 텍스처 배경 (90도 회전) -->
+  <div id="paper-bg"></div>
+
+  <!-- MAIN LAYOUT -->
+  <div class="page-wrapper">
+    <header class="site-header">
+      <span class="header-label"><span class="tc">유</span><span class="tc">희</span><span class="tc">계</span><span class="tc last">보</span></span>
+    </header>
+
+    <div class="timeline-container" id="timeline-container">
+      <div class="loading-state" id="loading-state">
+        <div class="loading-dot"></div>
+        <div class="loading-dot"></div>
+        <div class="loading-dot"></div>
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
 </body>
 </html>
